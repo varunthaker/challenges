@@ -58,6 +58,10 @@ section {
   border-left: solid 5px orange;
 }
 
+.favourites {
+  border-left: 5px solid gold;
+}
+
 /* ------- Headings Part 2 ------- */
 
 /* Task 6: The headings of our sections somehow look boring. Therefore, we want to change this:
