@@ -11,6 +11,7 @@ Let's fix this mess!
     <title>HTML Basics Excercise</title>
     <meta charset="UTF-8" />
   </head>
+
   <header>
     <div><h1>Jane Doe</h1></div>
     <!--Which elements could be used to link to parts of the webpage,
@@ -20,10 +21,26 @@ Let's fix this mess!
       <div><a href="">Contact</a></div>
       <div><a href="">Skillset</a></div>
     </div>
+
+
+  <header>
+    <h1>Jane Doe</h1>
+    <!--Which elements could be used to link to parts of the webpage,
+		which appear below?  DONE -->
+    <nav>
+      
+      <div id="nav">
+        <div><a href="">About Me</a></div>
+        <div><a href="">Contact</a></div>
+        <div><a href="">Skillset</a></div>
+      </div>
+    </nav>
+
   </header>
   <!--Looks like the following part is the central content of our webpage.  DONE-->
 
   <body>
+
     <div>
       <div id="about-me">
         <h2>About me</h2>
@@ -72,8 +89,71 @@ Let's fix this mess!
             <li>Painting rainbows</li>
             <li>Party</li>
           </ul>
+
+    <main>
+      
+        <section>
+        <div id="about-me">
+          <h2>About me</h2>
+          <p>
+            Hi there! Welcome to my personal website. Here is gathered the most
+            important information about me. If you want to work with me or get
+            to know me, please don't hesitate to get in contact.
+          </p>
+
+          <!--What element could be used to combine an image wHTith a descriptive caption?  DONE-->
+
+          <img
+            src="https://source.unsplash.com/random/400x300?fruit"
+            alt="a random picture"
+          />
+          <p>
+            A random picture, because I would like to maintain my privacy and
+            let my code speak for me, instead of images.
+          </p>
         </div>
+      </section>
+
+      <section>
+        <div id="contact">
+          <h2>Contact</h2>
+          <!--When clicking on these element, nothing happens! But I want to be redirected to the other websites. Why is it not working? DONE -->
+
+          <div>
+            <a href="https://github.com/neuefische" target="_blank">GitHub</a>
+          </div>
+          <div>
+            <a href="https://de.linkedin.com/" target="_blank">LinkedIn</a>
+          </div>
+          <div>
+            <a href="https://codesandbox.io/" target="_blank">CodeSandbox</a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div id="skills">
+          <h3>Skillset</h3>
+          <!--This part could use some bulletpoint to be more structured-->
+          <div>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>Painting rainbows</li>
+              <li>Party</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
       </div>
+
     </div>
+
+    </main>
+
   </body>
 </html>
