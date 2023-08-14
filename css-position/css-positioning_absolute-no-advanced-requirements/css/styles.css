@@ -7,6 +7,7 @@
 body {
   margin: 0;
   font-family: system-ui;
+  position: relative;
 }
 
 main {
@@ -24,6 +25,7 @@ main {
   height: 80px;
   width: 80px;
   text-align: center;
+  position: relative;
 }
 
 /**
@@ -40,25 +42,43 @@ main {
 }
 
 .box--top-center {
+  position: absolute;
+  top: 0;
+  left: 210px;
   background-color: #85c1e9;
 }
 
 .box--top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
   background-color: #5dade2;
 }
 
 .box--center {
+  position: absolute;
+  left: 210px;
+  top: 260px;
   background-color: #3498db;
 }
 
 .box--bottom-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   background-color: #2874a6;
 }
 
 .box--bottom-center {
+  position: absolute;
+  right: 0;
+  bottom: 0;
   background-color: #21618c;
 }
 
 .box--bottom-right {
+  position: absolute;
+  right: 210px;
+  bottom: 0;
   background-color: #1b4f72;
 }
