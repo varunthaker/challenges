@@ -1,3 +1,41 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  background-color: whitesmoke;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 10px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+}
+
+h2 {
+  font-size: 25px;
+  margin: 15px 0px;
+}
+
+.repo {
+  margin: 10px 0px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.account {
+  color: grey;
+  font-size: large;
+  margin: 10px 0px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+button {
+  color: rgb(17, 171, 222);
+  border: none;
+  background-color: none;
 }
