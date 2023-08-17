@@ -137,6 +137,7 @@ fairly essential to completing this challenge. */
   margin-top: var(--main-content-margin-top);
   padding: var(--gap) 0 var(--gap) 0;
   background: var(--navy-blue);
+  flex-wrap: wrap;
 }
 
 .intro-text {
@@ -247,7 +248,38 @@ width, etc. */
 /* Replace this comment with your media query. */
 /* --- */
 
+@media screen and (min-width: 600px) {
+  .card-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100vw;
+  }
+
+  .card-section * {
+    width: 45%;
+    margin: 5px;
+  }
+}
+
 /* Media Query Desktop */
 /* --- */
 /* Replace this comment with your media query. */
 /* --- */
+@media screen and (min-width: 1200px) {
+  .card-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100vw;
+  }
+
+  .card-section * {
+    width: 45%;
+    margin: 5px;
+  }
+
+  .product-card.--forest {
+    width: 100%;
+  }
+}
