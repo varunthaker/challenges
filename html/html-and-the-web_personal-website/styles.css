@@ -20,19 +20,19 @@
 
 header {
   width: 100%;
-  height: 10vh;
+  height: auto‚;
   background-color: aliceblue;
 }
 
 main {
   width: 100%;
-  height: 80vh;
+  height: auto;
   background-color: aquamarine;
 }
 
 footer {
   width: 100%;
-  height: 10vh;
+  height: 1auto;
   background-color: aliceblue;
 }
 
@@ -54,4 +54,19 @@ footer {
   border-radius: 50%;
   position: absolute;
   left: 0;
+}
+
+/* Footer  */
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  margin: 10px;
+}
+
+.socila-media a {
+  margin-right: 20px;
 }
