@@ -1,33 +1,50 @@
-let data = null;
+let data;
 
-// let check1 = Array.isArray(data);
+let typeOfData = typeof data;
 
-// let check3 = isNaN(data);
-// Null & BigInit
+let message = "";
 
-switch (typeof data) {
+switch (typeOfData) {
   case "undefined":
-    console.log("undefined!");
+    message = "Undefine!";
     break;
-  case "null":
-    console.log("Null!");
-    break;
-  case "number":
-    console.log("Number!");
-    break;
+
   case "string":
-    console.log("String!");
+    message = "String!";
     break;
   case "bigInt":
-    console.log("BigInt!");
+    message = "BigInt!";
     break;
   case "function":
-    console.log("Function!");
+    message = "Function!";
     break;
+  case "boolean":
+    message = "boolean!";
+    break;
+
+  //number & NaN
+
+  case "number":
+    if (Number.isNaN(data)) {
+      message = "Not a Number";
+      break;
+    }
+    message = "Number!";
+    break;
+
   case "object":
-    console.log("Object!");
+    if (Array.isArray(data)) {
+      message = "Array";
+      break;
+    } else if (data == null) {
+      message = "Null";
+    } else {
+      message = "Object";
+    }
     break;
 
   default:
-    console.log("I have no Idea");
+    message = "Does not exist";
 }
+
+console.log(`Youre data-type is ${message}`);
