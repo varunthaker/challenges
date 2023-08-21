@@ -21,14 +21,32 @@ Change the contents of this page depending on the current day and time.
 */
 
 const display = document.querySelector('[data-js="display"]');
+const getGreeting = () => {
+  const currentTime = new Date().getHours();
+  console.log(currentTime);
+  if (currentTime >= 6 && currentTime <= 12) {
+    return "Good Morning";
+  } else if (currentTime >= 13 && currentTime <= 18) {
+    return "Good Afternoon";
+  } else if (currentTime >= 19 && currentTime <= 22) {
+    return "Good Evening";
+  } else {
+    return "Good Night";
+  }
+};
 
-function getGreeting() {
+const getDayColor = () => {
   // Code here
-}
-
-function getDayColor() {
-  // Code here
-}
+  const currentDay = new Date().getDay();
+  console.log(currentDay);
+  if (currentDay === 1) {
+    return "darkgrey";
+  } else if (currentDay > 1 && currentDay <= 5) {
+    return "lightblue";
+  } else {
+    return "hotpink";
+  }
+};
 
 display.textContent = getGreeting();
 document.body.style.backgroundColor = getDayColor();
