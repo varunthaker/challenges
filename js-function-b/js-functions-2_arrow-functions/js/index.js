@@ -5,7 +5,7 @@ Rewrite the following functions as arrow functions.
 Use implicit returns when possible
 */
 
-const getCurrentHour = () => {
+function getCurrentHour() {
   const now = new Date();
   const currentHour = now.getHours();
   if (currentHour === 0) {
@@ -17,21 +17,21 @@ const getCurrentHour = () => {
   } else {
     return currentHour - 12 + "pm";
   }
-};
+}
 
-const getVectorLength = (x, y, z) => {
+function getVectorLength(x, y, z) {
   return (x ** 2 + y ** 2 + z ** 2) ** 0.5;
-};
+}
 
-const cleanInput = (string) => {
+function cleanInput(string) {
   return string.toLowerCase().trim();
-};
+}
 
 /*
 Rewrite the following arrow functions as classic functions.
 */
 
-function isOddAndSmall(number) {
+const isOddAndSmall = (number) => {
   if (number > 10) {
     return false;
   }
@@ -41,19 +41,8 @@ function isOddAndSmall(number) {
   }
 
   return true;
-}
+};
 
-function add3(a, b, c) {
-  return a + b + c;
-}
+const add3 = (a, b, c) => a + b + c;
 
-function repeat10(string) {
-  return string.repeat(10);
-}
-
-console.log(getCurrentHour());
-console.log(getVectorLength(1, 2, 3));
-console.log(cleanInput("varun"));
-console.log(isOddAndSmall(12));
-console.log(add3(1, 2, 6));
-console.log(repeat10("th"));
+const repeat10 = (string) => string.repeat(10);
