@@ -17,9 +17,5 @@ button.addEventListener("click", () => {
   const input = inputElement.value;
   const upperCase = input.toUpperCase();
 
-  output.innerText = `Youre upperCase String is ${upperCase}`;
-
-  console.log(upperCase);
+  output.innerText = `Your upperCase String is ${upperCase}`;
 });
-
-const upperCase = () => {};
