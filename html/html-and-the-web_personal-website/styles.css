@@ -11,21 +11,16 @@
 }
 
 :root {
-  --body-background-color: black;
-  --font-style: ;
+  --body-background-color: #0f405a;
+  --font-family: "Open Sans", sans-serif;
   --font-color: white;
+  --nav-font-color: #fc7753;
 }
 
-/* body {
-  /* background-color: var(--body-background-color);
+body {
+  background-color: black;
   color: var(--font-color);
-} */
-
-header {
-  width: 100%;
-  height: auto‚;
-  background-color: aliceblue;
-  border: 1px solid;
+  font-family: var(--font-family);
 }
 
 main {
