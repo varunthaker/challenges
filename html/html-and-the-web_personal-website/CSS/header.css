@@ -3,6 +3,10 @@
   height: auto‚;
   background-color: var(--body-background-color);
   color: var(--font-color);
+  position: relative;
+  position: fixed;
+  z-index: 1;
+  top: 0;
 }
 
 .nav-bar {
@@ -19,11 +23,17 @@
   list-style: none;
 }
 
-.nav-bar li > .tag-image {
-  border-radius: 50% rgb(236, 29, 29);
-  border: 5px white;
+.tag-image img {
+  width: 50px;
+  border-radius: 50%;
   position: absolute;
-  left: 0;
+  left: 10px;
+  bottom: 18px;
+  border: 5px solid var(--font-color);
+}
+
+.changeMode i {
+  width: 50px;
 }
 
 .nav-bar li a {
@@ -33,5 +43,5 @@
 }
 
 .nav-bar li a:hover {
-  color: white;
+  color: var(--font-color);
 }

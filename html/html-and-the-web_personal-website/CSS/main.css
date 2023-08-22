@@ -3,6 +3,7 @@
   justify-content: space-around;
   align-items: center;
   border: 1px solid;
+  position: absolute;
 }
 
 .home-container .--left {
