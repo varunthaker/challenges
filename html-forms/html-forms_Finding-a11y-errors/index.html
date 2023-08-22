@@ -16,15 +16,15 @@
         Please let us know how we can support you with a11y issues.
       </p>
 
-      <form role="form" for="">
-        <fieldset aria-labelledby="title-main">
-          <legend aria-labelledby="description">Enter your information</legend>
-          <label for aria-describedby="name-Input">Name:</label>
-          <input id="name-Input" type="text" name="name" />
-          <label aria-describedby="age-Input">Age:</label>
-          <input id="age-Input" type="text" name="age" />
-          <label aria-describedby="color-Input">Color you cannot see:</label>
-          <input id="color-Input" type="color" name="color" />
+      <form role="form" aria-labelledby="title-main" for="">
+        <fieldset >
+          <legend aria-describedby="description">Enter your information</legend>
+          <label for aria-describedby="name-input">Name:</label>
+          <input id="name-input" type="text" name="name" />
+          <label aria-describedby="age-input">Age:</label>
+          <input id="age-input" type="text" name="age" />
+          <label aria-describedby="color-input">Color you cannot see:</label>
+          <input id="color-input" type="color" name="color" />
           <textarea rows="7" placeholder="Leave us a message..."></textarea>
           <button type="submit">Submit</button>
         </fieldset>
