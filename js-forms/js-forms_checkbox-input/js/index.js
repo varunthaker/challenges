@@ -18,6 +18,15 @@ form.addEventListener("submit", (event) => {
 
   // --^-- write your code here --^--
 
+  const formData = new FormData(event.target);
+  const formKeyValue = Object.fromEntries(formData);
+
+  if (formKeyValue.tos === "on") {
+    hideTosError();
+    alert("Form submitted");
+  } else {
+    showTosError();
+  }
+
   // eslint-disable-next-line no-alert
-  alert("Form submitted");
 });
