@@ -1,19 +1,31 @@
+footer {
+  width: 100%;
+  height: auto;
+  background-color: var(--body-background-color);
+  color: var(--footer-font-color);
+}
+
 .footer-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 15px;
-  border: 1px solid;
+  gap: 20px;
+  padding: 10px 0;
 }
-.footer-container .title {
-  padding-top: 15px;
-}
+
 .socila-media a {
   margin: 10px;
   padding: 50px 10px;
+  color: var(--footer-font-color);
+  width: 50px;
+  height: 50px;
 }
 
-.footer-container p {
-  color: red;
+.socila-media i:hover {
+  color: var(--nav-font-color);
+  transform: translate(5px, -5px);
+  width: 25px;
+  height: 25px;
+  transition: 0.5s;
 }
