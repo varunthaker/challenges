@@ -1,11 +1,15 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
 .home-container {
-  height: 70vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: center;
 
-  top: 100px;
+  /* top: 100px; */
 }
 
 .home-container .--left {
