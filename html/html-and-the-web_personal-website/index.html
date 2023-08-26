@@ -15,10 +15,11 @@
       src="https://kit.fontawesome.com/9de9d79f9f.js"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="./js/index.js" defer></script>
     <title>Varun Thaker</title>
   </head>
   <body>
-    <header class="header-container">
+    <header class="header-container" data-js="main-container">
       <ul class="nav-bar">
         <li>
           <div class="tag-image">
@@ -31,6 +32,11 @@
         <li><a href="#about">About</a></li>
         <li><a href="#project">Project</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li class="toggle-switch">
+          <button data-js="toggle-switch">
+            <i class="fa-moon fa-regular fa-2xl" id="theme"></i>
+          </button>
+        </li>
       </ul>
     </header>
     <main class="main-container">
