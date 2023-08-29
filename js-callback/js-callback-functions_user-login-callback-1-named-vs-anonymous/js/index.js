@@ -6,3 +6,16 @@ function handleUserLogin(onSuccess) {
 }
 
 // Call handleUserLogin below!
+
+//Part1: Passing a named callback function.
+const showMeWelcomeMessage = () => {
+  console.log("Welcome! You are logged in now.");
+};
+
+handleUserLogin(showMeWelcomeMessage);
+
+//Part2: Passing Anonyms callback function
+
+handleUserLogin(() => {
+  console.log("You are Logged in with Anonym function");
+});
