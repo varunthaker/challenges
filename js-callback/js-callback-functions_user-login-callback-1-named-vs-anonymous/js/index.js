@@ -17,5 +17,5 @@ handleUserLogin(showMeWelcomeMessage);
 //Part2: Passing Anonyms callback function
 
 handleUserLogin(() => {
-  console.log("You are Logged in with Anonym function");
+  showMeWelcomeMessage();
 });
