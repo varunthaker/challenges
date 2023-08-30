@@ -2,176 +2,6 @@
   display: flex;
   flex-direction: column;
 }
-.home-container {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.home-container .--left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.home-container .--left h1 {
-  font-size: 2rem;
-}
-.--span {
-  color: var(--nav-font-color);
-}
-
-.home-container .--left .dev {
-  font-size: 1.5rem;
-}
-
-.dev {
-  font-size: 50px;
-}
-
-/* Text Animation Start */
-.rw-wrapper {
-  width: 70%;
-  position: relative;
-  margin: 25px auto 0 auto;
-  padding: 10px;
-  font-size: 1.5rem;
-  display: flex;
-}
-
-.iam {
-  white-space: nowrap;
-  font-size: 2rem;
-}
-
-.rw-words {
-  display: inline-block;
-  margin-left: 16px;
-  position: relative;
-  font-size: 2rem;
-}
-
-.rw-words-1 p {
-  /* max-width: 0; */
-  /* opacity: 0; */
-  color: var(--nav-font-color);
-  animation: slideDown 10s ease-in infinite;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.rw-words-1 p:nth-child(2) {
-  opacity: 0;
-  animation-delay: 2s;
-}
-
-.rw-words-1 p:nth-child(3) {
-  opacity: 0;
-  animation-delay: 5s;
-}
-
-@keyframes slideDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-25px);
-  }
-  30% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-}
-
-/* Text nimation ends */
-
-.home-container .--right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.home-container .--right img {
-  height: 60vh;
-  width: 100%;
-}
-
-/* About me Section */
-
-.aboutme-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  height: 100vh;
-  width: 100%;
-}
-
-.aboutme-container .title {
-  margin: 1rem;
-  font-size: 2rem;
-}
-
-.aboutme-subcontainer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.get-to-know {
-  padding: 20px;
-  margin: 20px;
-  width: 100%;
-}
-
-.get-to-know .title,
-.skills .title {
-  font-size: 1.5rem;
-  margin: 1rem 0;
-  text-align: top;
-  top: 0;
-  left: 0;
-}
-
-.get-to-know .content {
-  line-height: 1.5rem;
-  font-size: 1.15rem;
-}
-
-.skills {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  margin: 10px;
-  width: 100%;
-}
-
-.skill-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.skills-list-item {
-  margin: 5px;
-  padding: 10px;
-  background-color: antiquewhite;
-  border-radius: 10px;
-  color: slategray;
-  border: solid 0.5px black;
-}
 
 /* Projects */
 
@@ -181,27 +11,54 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border: solid 1px;
   height: 100vh;
 }
 
-.project-container .title {
-  margin: 1rem;
-}
-
-.project-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.project {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
 }
 
 .project img {
   width: 100%;
+  height: 300px;
   border-radius: 10px;
-  background-color: white;
-  /* display: block;
-  position: relative;
-  transition: translate 0.5s; */
+  /* display: block; */
+  /* position: relative; */
+  transition: translate 0.5s;
+}
+
+.project-container .title {
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+.project-list {
+  display: grid;
+  width: 70%;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-template-rows: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.layer {
+  height: 0;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #cc5f81);
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  transition: height 0.5s;
 }
 
 .layer h3 {
@@ -225,6 +82,36 @@
   font-size: 25px;
   background-color: #fff;
   border-radius: 50%;
+}
+
+.project:hover img {
+  transform: scale(1.1);
+}
+
+.project:hover .layer {
+  height: 100%;
+}
+
+.button {
+  border-color: #ff6c70;
+  background-color: #080808;
+  font-size: 10px;
+  color: whitesmoke;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  transition: background 0.5s;
+}
+
+.button1 {
+  margin: 20px 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: #ff004f;
 }
 
 .get-in-touch-container {

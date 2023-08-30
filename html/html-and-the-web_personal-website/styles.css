@@ -1,6 +1,8 @@
 @import url("./CSS/header.css");
 @import url("./CSS/footer.css");
 @import url("./CSS/main.css");
+@import url("./CSS/home.css");
+@import url("./CSS/about.css");
 
 *,
 *::after,
