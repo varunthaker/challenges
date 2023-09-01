@@ -14,22 +14,6 @@
   height: 100vh;
 }
 
-.project {
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-}
-
-.project img {
-  width: 100%;
-  /* height: 300px; */
-  aspect-ratio: 1/1;
-  border-radius: 10px;
-  /* display: block; */
-  /* position: relative; */
-  transition: translate 0.5s;
-}
-
 .project-container .title {
   margin: 1rem;
   font-size: 2rem;
@@ -37,27 +21,43 @@
 
 .project-list {
   display: grid;
-  width: 100%;
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
-  grid-template-rows: auto;
+  width: 95%;
+  grid-template-columns: repeat(3, minmax(auto, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding: 10px;
+}
+
+.project {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+  /* transition: translate 1s; */
 }
 
 .layer {
   height: 0;
-  width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), #cc5f81);
+  width: 80%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), var(--nav-font-color));
   border-radius: 10px;
   position: absolute;
   bottom: 0;
   left: 0;
+  /* makes content hidden */
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 40px;
+  padding: 5px 40px;
   text-align: center;
   transition: height 0.5s;
 }
@@ -73,14 +73,15 @@
 .layer .icons {
   margin: 10px;
 }
+
 .layer .icon1,
 .icon2 {
-  padding: 10px 10px;
+  padding: 0px 10px;
   margin-right: 10px;
-  color: #ff004f;
+  color: var(--nav-font-color);
   text-decoration: none;
-  line-height: 60px;
-  font-size: 25px;
+  /* line-height: 60px; */
+  font-size: 35px;
   background-color: #fff;
   border-radius: 50%;
 }
@@ -91,30 +92,33 @@
 
 .project:hover .layer {
   height: 100%;
+  width: 84.5%;
 }
 
-.button {
-  border-color: #ff6c70;
+.see-more {
+  border-color: var(--nav-font-color);
   background-color: #080808;
-  font-size: 10px;
+  width: 10em;
+  font-size: 1rem;
   color: whitesmoke;
   padding: 10px 10px;
   border-radius: 5px;
-  border-width: 1px;
-  transition: background 0.5s;
+  border-width: 3px;
+  transition: background-color 0.1s;
 }
 
-.button1 {
+/* .button1 {
   margin: 20px 0;
   display: flex;
   text-align: center;
   justify-content: center;
+} */
+
+.see-more:hover {
+  background-color: var(--nav-font-color);
 }
 
-.button:hover {
-  background-color: #ff004f;
-}
-
+/* Get in Touch */
 .get-in-touch-container {
   display: flex;
   flex-direction: column;
