@@ -22,15 +22,26 @@ startRaceButton.addEventListener("click", () => {
    * Hint 3:
    * The `animateRunner` function returns a promise which resolves when the animation is done.
    **/
-  ///1. .then()
+
   // --v-- write your code here --v--
-  animateRunner(runner1)
-    .then(() => animateRunner(runner2))
-    .then(() => animateRunner(runner3));
 
   // --^-- write your code here --^--
 
+  ///1. .then()
+
+  // animateRunner(runner1)
+  //   .then(() => animateRunner(runner2))
+  //   .then(() => animateRunner(runner3));
+
   //2. Async Await
+
+  const runningFunction = async () => {
+    await animateRunner(runner1);
+    await animateRunner(runner2);
+    await animateRunner(runner3);
+  };
+
+  runningFunction();
 
   startRaceButton.removeAttribute("disabled");
 });
