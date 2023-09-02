@@ -1,0 +1,59 @@
+/* Get in Touch */
+.get-in-touch-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 80vh;
+}
+
+.get-in-touch-container .title {
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+.get-in-touch-container p {
+  font-size: 1.25rem;
+}
+
+.form-container {
+  width: 50%;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: #262626;
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  padding: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px 10px;
+  margin: 10px 0px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.submit {
+  border-color: var(--nav-font-color);
+  background-color: #080808;
+  width: 5em;
+  padding: 5px;
+  border-radius: 5px;
+  border-width: 2px;
+  font-size: 0.8em;
+  color: whitesmoke;
+  transition: background-color 0.5s;
+}
+
+.submit:hover {
+  background-color: var(--nav-font-color);
+}

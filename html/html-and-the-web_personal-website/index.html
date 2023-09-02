@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="https://svgsilh.com/svg/2005545.svg" />
+    <link rel="icon" href="https://img.freepik.com/premium-vector/letter-v-rainbow-colored-letters-form-popular-children-s-game-pop-it-bright-letters-white-background-bright-letters-white-background_422344-714.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,7 +34,7 @@
         <li><a href="#contact">Contact</a></li>
         <li class="toggle-switch">
           <button data-js="toggle-switch">
-            <i class="fa-regular fa-moon fa-2xl" id="theme"></i>
+            <i class="fa-regular  fa-2xl fa-moon" id="theme"></i>
           </button>
         </li>
       </ul>
@@ -170,7 +170,7 @@
             </div>
           </div>
 
-          <div class="project">
+          <div class="project" data-js = "mainSibling">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Google_Keep_icon_%282015-2020%29.svg/640px-Google_Keep_icon_%282015-2020%29.svg.png"
               alt="Project image"
@@ -198,7 +198,7 @@
             </div>
           </div>
 
-          <div class="project">
+          <div class="project hidden" data-js="hidden-element">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Google_Keep_icon_%282015-2020%29.svg/640px-Google_Keep_icon_%282015-2020%29.svg.png"
               alt="Project image"
@@ -225,27 +225,57 @@
               </div>
             </div>
           </div>
+
+          <div class="project hidden" data-js="hidden-element">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Google_Keep_icon_%282015-2020%29.svg/640px-Google_Keep_icon_%282015-2020%29.svg.png"
+              alt="Project image"
+            />
+            <div class="layer">
+              <h3>Kepper App</h3>
+              <p>
+                It's clone of google Keep App, where one can keep of their notes
+                or task. <br />Tech: React, JS
+              </p>
+              <div class="icons">
+                <a
+                  href="https://react-keeper-app-psi.vercel.app/"
+                  target="_blank"
+                  class="icon1"
+                  ><i class="fa-solid fa-globe fa-xs"></i
+                ></a>
+                <a
+                  href="https://github.com/varunthaker/react_Keeper_app"
+                  target="_blank"
+                  class="icon2"
+                  ><i class="fa-brands fa-github fa-xs"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          
         </div>
-        <button class="see-more">See More</button>
+        <button class="see-more" data-js="see-more">Show More</button>
       </section>
 
       <!-- Contact Section -->
       <section class="get-in-touch-container" id="contact">
         <h3 class="title">Get in Touch</h3>
         <p>
-          Got a question or an interesting project, or just want to say Hello!
-          Go on and hit the button!
+          Have a question, an interesting project, or simply want to say Hi. 👋
+          <p>Go on and hit the button!</p>
         </p>
         <!-- form -->
         <article class="form-container">
           <form action="">
-            <label for="name">Name</label><br />
-            <input type="text" id="name" name="name" /><br />
-            <label for="Email">Email</label><br />
-            <input type="email" /><br />
-            <label for="Message">Message</label><br />
-            <input type="text" /><br />
-            <button type="submit">Submit</button><br />
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" autocomplete="off" required /><br />
+            <label for="Email">Email</label>
+            <input type="email" id ="email" name = "email" placeholder="Your e-mail" autocomplete="off" required/><br />
+            <label for="Message">Message</label> 
+            <textarea name="text-area" id="text-area" placeholder="Enter Your Message" autocomplete="off" required></textarea>
+            <button type="submit" class="submit" data-js="submit-form">Submit</button>
           </form>
         </article>
       </section>
@@ -273,7 +303,7 @@
         ></a>
       </div>
 
-      <p>© 2023 Varun Thaker | All Rights Reserved</p>
+      <p>© <span data-js="year"></span> Varun Thaker | All Rights Reserved</p>
     </footer>
   </body>
 </html>
