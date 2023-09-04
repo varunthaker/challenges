@@ -31,10 +31,6 @@ const toggleButton = document.querySelector('[data-js="toggle-switch"]');
 const toggleIcon = document.getElementById("theme");
 
 toggleButton.addEventListener("click", () => {
-  console.log("clicked");
-
-  console.log(toggleIcon.classList[0]);
-
   if (toggleIcon.classList[2] === "fa-moon") {
     toggleIcon.classList.remove("fa-moon");
     toggleIcon.classList.add("fa-sun");
@@ -43,5 +39,7 @@ toggleButton.addEventListener("click", () => {
     toggleIcon.classList.remove("fa-sun");
     toggleIcon.classList.add("fa-moon");
     bodyElement.classList.remove("light-mode");
+  } else {
+    return null;
   }
 });
