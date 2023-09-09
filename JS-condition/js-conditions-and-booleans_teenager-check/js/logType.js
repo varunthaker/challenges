@@ -6,7 +6,7 @@ let message = "";
 
 switch (typeOfData) {
   case "undefined":
-    message = "Undefine!";
+    message = "Undefined!";
     break;
 
   case "string":
