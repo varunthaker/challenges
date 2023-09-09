@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="https://img.freepik.com/premium-vector/letter-v-rainbow-colored-letters-form-popular-children-s-game-pop-it-bright-letters-white-background-bright-letters-white-background_422344-714.jpg" />
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/thumbnails/007/495/568/small/metal-gold-v-alphabet-letter-logo-icon-design-creative-template-for-company-with-dots-vector.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,7 +16,6 @@
       crossorigin="anonymous"
     ></script>
     <script type="module" src="./js/index.js" defer></script>
-    <script type= "module"src="./js/server.js" defer></script>
     <title>Varun Thaker</title>
   </head>
   <body>
@@ -117,6 +116,32 @@
         <div class="project-list">
           <div class="project">
             <img
+              src="https://m.media-amazon.com/images/I/91MteSqsrJL._AC_UF1000,1000_QL80_.jpg"
+              alt="Project image"
+            />
+            <div class="layer">
+              <h3>Rick and Morty App</h3>
+              <p>
+                The project displays the Characters info through API Call. <br />Tech: API Call ,DOM-Manuplation, JS, Advance CSS, Refactoring
+              </p>
+              <div class="icons">
+                <a
+                  href="https://varunthaker.github.io/Ricky-Morty-app/"
+                  class="icon1"
+                  target="_blank"
+                  ><i class="fa-solid fa-globe fa-xs"></i
+                ></a>
+                <a
+                  href="https://github.com/varunthaker/Ricky-Morty-app"
+                  class="icon2"
+                  target="_blank"
+                  ><i class="fa-brands fa-github fa-xs"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <img
               src="https://cdn.iconscout.com/icon/premium/png-256-thumb/e-commerce-2561681-2140287.png?f=webp"
               alt="Project image"
             />
@@ -171,33 +196,7 @@
             </div>
           </div>
 
-          <div class="project" data-js = "mainSibling">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Google_Keep_icon_%282015-2020%29.svg/640px-Google_Keep_icon_%282015-2020%29.svg.png"
-              alt="Project image"
-            />
-            <div class="layer">
-              <h3>Kepper App</h3>
-              <p>
-                It's clone of google Keep App, where one can keep of their notes
-                or task. <br />Tech: React, JS
-              </p>
-              <div class="icons">
-                <a
-                  href="https://react-keeper-app-psi.vercel.app/"
-                  target="_blank"
-                  class="icon1"
-                  ><i class="fa-solid fa-globe fa-xs"></i
-                ></a>
-                <a
-                  href="https://github.com/varunthaker/react_Keeper_app"
-                  target="_blank"
-                  class="icon2"
-                  ><i class="fa-brands fa-github fa-xs"></i
-                ></a>
-              </div>
-            </div>
-          </div>
+          
 
           <div class="project hidden" data-js="hidden-element">
             <img
@@ -227,33 +226,6 @@
             </div>
           </div>
 
-          <div class="project hidden" data-js="hidden-element">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Google_Keep_icon_%282015-2020%29.svg/640px-Google_Keep_icon_%282015-2020%29.svg.png"
-              alt="Project image"
-            />
-            <div class="layer">
-              <h3>Kepper App</h3>
-              <p>
-                It's clone of google Keep App, where one can keep of their notes
-                or task. <br />Tech: React, JS
-              </p>
-              <div class="icons">
-                <a
-                  href="https://react-keeper-app-psi.vercel.app/"
-                  target="_blank"
-                  class="icon1"
-                  ><i class="fa-solid fa-globe fa-xs"></i
-                ></a>
-                <a
-                  href="https://github.com/varunthaker/react_Keeper_app"
-                  target="_blank"
-                  class="icon2"
-                  ><i class="fa-brands fa-github fa-xs"></i
-                ></a>
-              </div>
-            </div>
-          </div>
 
           
         </div>
@@ -276,7 +248,7 @@
             <input type="email" id ="email" name = "email" placeholder="Your e-mail" autocomplete="off" required/><br />
             <label for="Message">Message</label> 
             <textarea name="text-area" id="text-area" placeholder="Enter Your Message" autocomplete="off" required></textarea>
-            <button type="submit" class="submit" data-js="submit-form">Submit</button>
+            <button type="submit" class="submit" data-js="submit-form"><span class = "button__text">Submit</span></button>
           </form>
         </article>
       </section>
