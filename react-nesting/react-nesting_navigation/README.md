@@ -82,7 +82,6 @@ import "./styles.css";
 export default function App() {
   return (
     <>
-      <Header>
         <Logo />
         <Navigation>
           <Link href="#home">Home</Link>
