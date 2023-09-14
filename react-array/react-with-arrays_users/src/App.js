@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React from "react";
 import "./styles.css";
 import Card from "./components/Card";
@@ -9,7 +10,9 @@ export default function App() {
     <main className="app">
       <Title text="ClientBoard" />
       <div className="app__card-grid">
-        <Card user={USERS[0]} />
+        {USERS.map((user) => {
+          return <Card key={user.id} user={user} />;
+        })}
       </div>
     </main>
   );
