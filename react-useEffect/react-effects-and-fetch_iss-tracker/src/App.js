@@ -10,7 +10,7 @@ export default function App() {
     longitude: 0,
     latitude: 0,
   });
-  const [intervalId, setIntervalId] = useState(0);
+
   async function getISSCoords() {
     try {
       const response = await fetch(URL);
@@ -21,12 +21,8 @@ export default function App() {
     }
   }
   useEffect(() => {
-    let intervalId = true;
-
-    if (intervalId) {
-      let intervalId = setInterval(getISSCoords, 5000);
-      clearInterval(intervalId);
-    }
+    let intervalId = setInterval(getISSCoords, 5000);
+    clearInterval(intervalId);
   }, []);
 
   return (
