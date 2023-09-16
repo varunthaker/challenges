@@ -1,26 +1,23 @@
+import { useEffect, useState } from "react";
 import "./StatusCheck.css";
 
 const apiStatusUrl = "https://example-apis.vercel.app/api/status";
 
 export default function StatusCheck() {
-  const statusIcon = "⁉️";
-  // Something needs to change here…
-  // ↙️
-  function handleCheckApiStatus() {
-    /**
-     * Hint 1:
-     * Use the `fetch()` function and pass the `apiStatusUrl` into it
-     *
-     * Hint 2:
-     * The fetch function returns a promise which resolves to a Response
-     * object once it is ready.
-     *
-     * Hint 3:
-     * The Response object has a `ok` property which is true if the response
-     * is okay and false if it is not.
-     **/
-    // --v-- write your code here --v--
-    // --^-- write your code here --^--
+  const [statusIcon, setStatusIcon] = useState("⁉️");
+  const [data, setData] = useState("");
+
+  async function handleCheckApiStatus(event) {
+    try {
+      event.target.textContent = "⏳";
+      const response = await fetch(apiStatusUrl);
+      event.target.textContent = "Check API Status";
+      const data = await response.json();
+      setStatusIcon(response.ok ? "✅" : "❌");
+      setData(data.status);
+    } catch (error) {
+      setStatusIcon("🚨");
+    }
   }
 
   return (
@@ -29,10 +26,11 @@ export default function StatusCheck() {
         <h2 className="status-check__heading">Status:</h2>
         <span className="status-check__icon">{statusIcon}</span>
       </div>
+      <h5>Http Status: {data}</h5>
       <button
         type="button"
         className="status-check__button"
-        onClick={handleCheckApiStatus}
+        onClick={() => handleCheckApiStatus(event)}
       >
         Check API Status
       </button>
