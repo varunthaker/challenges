@@ -22,7 +22,10 @@ export default function App() {
   }
   useEffect(() => {
     let intervalId = setInterval(getISSCoords, 5000);
-    clearInterval(intervalId);
+
+    return ()=> {
+      
+    clearInterval(intervalId);}
   }, []);
 
   return (
