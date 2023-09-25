@@ -1,10 +1,12 @@
 import Link from "../components/Link";
+import { lightStore } from "@/store/lightStore";
 
 export default function HomePage() {
+  const { count } = lightStore();
   return (
     <div>
       <h1>Home</h1>
-      <p>?? light(s) are on.</p>
+      <p>{count} light(s) are on.</p>
       <p>
         <Link href="/lights">All lights →</Link>
       </p>

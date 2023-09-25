@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Light from "../Light";
+import { lightStore } from "@/store/lightStore";
 
 const StyledLights = styled.ul`
   list-style-type: none;
@@ -12,32 +13,19 @@ const StyledLights = styled.ul`
 `;
 
 export default function Lights() {
+  const { roomData } = lightStore();
+  console.log(roomData);
+
   return (
     <StyledLights>
-      <li>
-        <Light name="Living Room" />
-      </li>
-      <li>
-        <Light name="Kitchen" />
-      </li>
-      <li>
-        <Light name="Bedroom" />
-      </li>
-      <li>
-        <Light name="Bathroom" />
-      </li>
-      <li>
-        <Light name="Garage" />
-      </li>
-      <li>
-        <Light name="Porch" />
-      </li>
-      <li>
-        <Light name="Garden" />
-      </li>
-      <li>
-        <Light name="Office" />
-      </li>
+      {roomData.map((room) => {
+        console.log(room);
+        return (
+          <li key={room.id}>
+            <Light room={room} />
+          </li>
+        );
+      })}
     </StyledLights>
   );
 }
