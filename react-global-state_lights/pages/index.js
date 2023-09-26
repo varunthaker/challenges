@@ -1,8 +1,8 @@
 import Link from "../components/Link";
-import { lightStore } from "@/store/lightStore";
+import { useLightStore } from "@/store/lightStore";
 
 export default function HomePage() {
-  const { count } = lightStore();
+  const { count } = useLightStore();
   return (
     <div>
       <h1>Home</h1>

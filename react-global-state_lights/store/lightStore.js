@@ -3,9 +3,15 @@ import { roomData } from "./rooms";
 
 // console.log(roomData);
 
-export const lightStore = create((set) => ({
+export const useLightStore = create((set) => ({
   count: 0,
   roomData: roomData,
-  isOn: false,
-  handleToggle: () => set((isOn) => !isOn),
+  handleToggle: (id) =>
+    set((state) => {
+      return {
+        roomData: state.roomData.map((room) => {
+          return room.id === id ? { ...room, isOn: !room.isOn } : room;
+        }),
+      };
+    }),
 }));
