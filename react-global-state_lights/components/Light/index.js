@@ -2,7 +2,7 @@ import { useState } from "react";
 import { LightButton, Icon, Text, Name, State } from "./Light.styled";
 import { lightStore } from "@/store/lightStore";
 
-export default function Light({ room }) {
+export default function Light({ room, name, id, isOn }) {
   // const [isOn, setIsOn] = useState(false);
   const { handleToggle } = lightStore();
 
@@ -16,14 +16,14 @@ export default function Light({ room }) {
     <LightButton
       type="button"
       onClick={() => {
-        handleToggle();
+        handleToggle(id);
       }}
-      $isOn={room.isOn}
+      $isOn={isOn}
     >
       <Icon $isOn={room.isOn}>💡</Icon>
       <Text>
-        <Name>{room.name}</Name>
-        <State>{room.isOn ? true : false}</State>
+        <Name>{name}</Name>
+        <State>{isOn ? true : false}</State>
       </Text>
     </LightButton>
   );
