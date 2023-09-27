@@ -1,11 +1,9 @@
 import { create } from "zustand";
 import { roomData } from "./rooms";
 
-// console.log(roomData);
-
-export const useLightStore = create((set) => ({
-  count: 0,
+export const useLightStore = create((set, get) => ({
   roomData: roomData,
+  count: 0,
   handleToggle: (id) =>
     set((state) => {
       return {
@@ -14,4 +12,14 @@ export const useLightStore = create((set) => ({
         }),
       };
     }),
+
+  numOfSwitchedOnLights: () =>
+    get().roomData.reduce((prev, curr) => prev + (curr.isOn ? 1 : 0), 0),
 }));
+
+// count: () =>
+//   get().roomData.reduce((prev, cur) => prev + (cur.isOn ? 1 : 0), 0),
+
+// const countvalue = roomData.reduce((prev, curr) => {
+//   return curr.isOn ? prev + 1 : prev;
+// }, 0);
