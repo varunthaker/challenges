@@ -7,17 +7,19 @@ export default function Character() {
   const id = useRouter().query.id;
 
   // fetcher function with error handling other than status code 200-299
-  const fetcher = async (url) => {
-    const res = await fetch(url);
-    if (!res.ok) {
-      const error = new Error("An error occurred while fetching the data.");
-      error.info = await res.json();
-      error.status = res.status;
-      throw error;
-    }
-    return res.json();
-  };
+  // const fetcher = async (url) => {
+  //   console.log(url);
+  //   const res = await fetch(url);
+  //   if (!res.ok) {
+  //     const error = new Error("An error occurred while fetching the data.");
+  //     error.info = await res.json();
+  //     error.status = res.status;
+  //     throw error;
+  //   }
+  //   return res.json();
+  // };
 
+  const fetcher = (...args) => fetch(...args).then((res) => res.json());
   const URL = `https://swapi.dev/api/people/${id}`;
 
   const { data: character, error, isLoading } = useSWR(URL, fetcher);

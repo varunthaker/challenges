@@ -5,9 +5,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
-      <SWRConfig>
-        <Component {...pageProps} />
-      </SWRConfig>
+      <Component {...pageProps} />
     </>
   );
 }
