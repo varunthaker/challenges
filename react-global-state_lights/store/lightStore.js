@@ -3,7 +3,7 @@ import { roomData } from "./rooms";
 
 export const useLightStore = create((set, get) => ({
   roomData: roomData,
-  count: 0,
+
   handleToggle: (id) =>
     set((state) => {
       return {
@@ -12,14 +12,16 @@ export const useLightStore = create((set, get) => ({
         }),
       };
     }),
+  switchAllLights: (value) => {
+    set((state) => {
+      return {
+        roomData: state.roomData.map((room) => {
+          return { ...room, isOn: value };
+        }),
+      };
+    });
+  },
 
   numOfSwitchedOnLights: () =>
     get().roomData.reduce((prev, curr) => prev + (curr.isOn ? 1 : 0), 0),
 }));
-
-// count: () =>
-//   get().roomData.reduce((prev, cur) => prev + (cur.isOn ? 1 : 0), 0),
-
-// const countvalue = roomData.reduce((prev, curr) => {
-//   return curr.isOn ? prev + 1 : prev;
-// }, 0);

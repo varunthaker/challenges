@@ -13,8 +13,7 @@ const StyledLights = styled.ul`
 `;
 
 export default function Lights() {
-  const { roomData } = useLightStore();
-  console.log(roomData);
+  const roomData = useLightStore((state) => state.roomData);
 
   return (
     <StyledLights>
