@@ -1,33 +1,83 @@
 import { useState } from "react";
 import { StyledForm, StyledInputContainer } from "./Form.styled";
+import { useImmer } from "use-immer";
 
 export default function Form() {
-  const [mountain, setMountain] = useState({
-    name: "Mount Everest",
+  const [mountain, setMountain] = useImmer({
+    name: "",
     values: {
-      altitude: 8848,
-      mountainRange: "Himalayas",
+      altitude: "",
+      mountainRange: "",
     },
   });
 
-  function handleNameChange(event) {}
+  // function handleNameChange(event) {
+  //   let mountainName = event.target.value;
+  //   setMountain({ ...mountain, name: mountainName });
+  // }
+  //Object Destructured Way //
+  // function handleNameChange(event) {
+  //   let mountainName = event.target.value;
+  //   setMountain((prevState) => {
+  //     return { ...prevState, name: mountainName };
+  //   });
+  // }
 
-  function handleAltitudeChange(event) {}
+  // function handleAltitudeChange(event) {
+  //   let mountainAltitude = event.target.value;
+  //   setMountain((prevState) => {
+  //     return {
+  //       ...prevState,
+  //       values: { ...mountain.values, altitude: mountainAltitude },
+  //     };
+  //   });
+  // }
 
-  function handleMountainRangeChange(event) {}
+  // function handleMountainRangeChange(event) {
+  //   let givenMountainRange = event.target.value;
+  //   setMountain((prevState) => {
+  //     return {
+  //       ...prevState,
+  //       values: { ...mountain.values, mountainRange: givenMountainRange },
+  //     };
+  //   });
+  // }
+
+  function handleNameChange(event) {
+    let mountainName = event.target.value;
+    setMountain((draft) => {
+      draft.name = mountainName;
+    });
+  }
+  function handleAltitudeChange(event) {
+    let mountainAltitude = event.target.value;
+    setMountain((draft) => {
+      draft.values.altitude = mountainAltitude;
+    });
+  }
+  function handleMountainRangeChange(event) {
+    let givenMountainRange = event.target.value;
+    setMountain((draft) => {
+      draft.values.mountainRange = givenMountainRange;
+    });
+  }
 
   return (
     <StyledForm>
       <StyledInputContainer>
         <label htmlFor="name">Name:</label>
-        <input id="name" value={mountain.name} onChange={handleNameChange} />
+        <input
+          id="name"
+          // value={mountain.name}
+          onChange={() => handleNameChange(event)}
+        />
       </StyledInputContainer>
       <StyledInputContainer>
         <label htmlFor="altitude">Altitude:</label>
         <input
           id="altitude"
           value={mountain.values.altitude}
-          onChange={handleAltitudeChange}
+          onChange={() => handleAltitudeChange(event)}
         />
       </StyledInputContainer>
       <StyledInputContainer>
@@ -35,7 +85,7 @@ export default function Form() {
         <input
           id="mountainRange"
           value={mountain.values.mountainRange}
-          onChange={handleMountainRangeChange}
+          onChange={() => handleMountainRangeChange(event)}
         />
       </StyledInputContainer>
       <output>
