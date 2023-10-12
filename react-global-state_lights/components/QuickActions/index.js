@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Button from "../Button";
-import { useLightStore } from "@/store/lightStore";
+import { useLightStore } from "../../store/lightStore";
 
 const StyledQuickActions = styled.div`
   display: flex;

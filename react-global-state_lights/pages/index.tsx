@@ -1,5 +1,5 @@
 import Link from "../components/Link";
-import { useLightStore } from "@/store/lightStore";
+import { useLightStore } from "../store/lightStore";
 
 export default function HomePage() {
   const numOfSwitchedOnLights = useLightStore(

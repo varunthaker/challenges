@@ -1,4 +1,5 @@
-export const roomData = [
+import { roomInfo } from "../types";
+export const roomData: Array<roomInfo> = [
   {
     id: 1,
     name: "Living Room",

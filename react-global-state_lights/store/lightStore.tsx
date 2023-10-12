@@ -1,13 +1,21 @@
 import { create } from "zustand";
 import { roomData } from "./rooms";
+import { roomInfo } from "../types";
 
-export const useLightStore = create((set, get) => ({
+interface lightStore {
+  roomData: Array<roomInfo>;
+  handleToggle: (id: number) => void;
+  switchAllLights: (value: boolean) => void;
+  numOfSwitchedOnLights: () => number;
+}
+
+export const useLightStore = create<lightStore>((set, get) => ({
   roomData: roomData,
 
-  handleToggle: (id) =>
+  handleToggle: (id: number) =>
     set((state) => {
       return {
-        roomData: state.roomData.map((room) => {
+        roomData: state.roomData.map((room: roomInfo) => {
           return room.id === id ? { ...room, isOn: !room.isOn } : room;
         }),
       };

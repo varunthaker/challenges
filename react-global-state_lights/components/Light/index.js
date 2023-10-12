@@ -1,5 +1,5 @@
 import { LightButton, Icon, Text, Name, State } from "./Light.styled";
-import { useLightStore } from "@/store/lightStore";
+import { useLightStore } from "../../store/lightStore";
 export default function Light({ room }) {
   const { name, id, isOn } = room;
 

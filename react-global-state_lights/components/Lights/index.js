@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Light from "../Light";
-import { useLightStore } from "@/store/lightStore";
+import { useLightStore } from "../../store/lightStore";
 
 const StyledLights = styled.ul`
   list-style-type: none;
